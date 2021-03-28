@@ -143,3 +143,40 @@ section{
 #primary-screen a:hover {
     background-color: #10071d;
 }
+
+
+#secondary-screen{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+
+#secondary-screen img{
+    position: absolute;
+    height: 100vh;
+    left: 0;
+    bottom: 0;
+}
+
+
+#secondary-screen .publication{
+    color: white;
+    width: 50%;
+}
+
+
+#secondary-screen .publication h1{
+    text-transform: uppercase;
+    font-family: 'gilroy';
+    font-weight: 800;
+    font-size: 24px;
+
+}
+
+
+#secondary-screen .publication p{
+    font-family: 'gilroy';
+    font-weight: 100;
+    font-size: 18px;
+}
