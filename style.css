@@ -96,3 +96,10 @@ section{
     padding: 0 100px;
     position: relative;
 }
+
+
+#primary-screen{
+    background: url(./img/banner-site.png);
+    background-size: cover;
+    background-position: center;
+}
