@@ -79,13 +79,17 @@
             event.preventDefault();
             fetch('https://emailer-api.herokuapp.com/sender', {
                 method:'POST',
-                body: {
+                headers: {
+                    'content-type':'application/json'
+                },
+                body: JSON.stringify({
                     emailFrom: document.getElementById('email').value,
                     emailTo: 'aluizioantonio6@gmail.com',
                     name: document.getElementById('name').value,
-                    message: document.getElementById('message').value
-                }
-            }).then(() => alert('sucesso!'))
+                    message: document.getElementById('message').value,
+                })
+            })
+              .then(() => alert('sucesso!'))
               .cath(() => alert('Erro ao enviar o email!'));
         }
     </script>
