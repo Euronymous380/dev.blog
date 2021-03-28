@@ -30,7 +30,7 @@
 
     <main>
         <section id="contact">
-            <form>
+            <form onsubmit="enviarEmail(event)">
                 <h1>Contato</h1>
                 <input type="text" name="name" id="name" placeholder="name" required>
                 <input type="text" name="email" id="email" placeholder="Email" required>
@@ -74,6 +74,21 @@
             </a>
         </div>
     </footer>
+    <script>
+        function enviarEmail(event){
+            event.preventDefault();
+            fetch('https://emailer-api.herokuapp.com/sender', {
+                method:'POST',
+                body: {
+                    emailFrom: document.getElementById('email').value,
+                    emailTo: 'aluizioantonio6@gmail.com',
+                    name: document.getElementById('name').value,
+                    message: document.getElementById('message').value
+                }
+            }).then(() => alert('sucesso!'))
+              .cath(() => alert('Erro ao enviar o email!'));
+        }
+    </script>
     
 </body>
 </html>
